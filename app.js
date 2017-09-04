@@ -11,7 +11,7 @@ const fs = require('fs');
 inquirer.prompt([
    {
        name: 'start',
-       message: 'pick and option',
+       message: 'pick an option',
        type: 'list',
        choices: ["add-a-flashcard", "show-all-cards"]
    }
@@ -19,6 +19,7 @@ inquirer.prompt([
 ]).then(function(answer){
     if (answer.start === 'add-a-flashcard'){
         addCard();
+
     }else if (answer.start === 'show-all-cards'){
         showCards();
     }
@@ -34,7 +35,7 @@ var addCard = function () {
         choices: ["basic-flashcard", "clonze-flashcard"]
     }]).then(function(answer) {
         //basic card add
-      if (answer.cardType === 'basic-flashcards'){
+      if (answer.cardType === 'basic-flashcard'){
           basicCardPrompt();
           //clonze card add
       }else if (answer.cardType === 'clonze-flashcard'){
@@ -89,7 +90,7 @@ var showCards = function (){
         if (err){
             console.log(err);
         }
-        var questions = data.split(',');
+        var questions = data.split(';');
         var notBlank = function(value) {
             return value;
         };

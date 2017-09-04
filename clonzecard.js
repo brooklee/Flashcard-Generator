@@ -20,7 +20,7 @@ function ClonzeCard(text,clonze) {
             };
        
 //===================add card to log=================================
-       fs.appendFile('log.txt', JSON.stringify(data) + "," , 'utf8' , function (err) {
+       fs.appendFile('log.txt', JSON.stringify(data) + ";" , 'utf8' , function (err) {
            if (err) {
                console.log("err");
            }
