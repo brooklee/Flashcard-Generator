@@ -1,7 +1,7 @@
 //requirements
 const fs = require('fs');
 
-module.exports = ClonzeCard;
+
 
 //===========================Constructor=============================
 function ClonzeCard(text,clonze) {
@@ -28,3 +28,4 @@ function ClonzeCard(text,clonze) {
 };
 
 }
+module.exports = ClonzeCard;
